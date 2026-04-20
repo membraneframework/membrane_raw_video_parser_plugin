@@ -120,7 +120,7 @@ defmodule Membrane.RawVideo.Parser do
     end
   end
 
-  defp bump_timestamp(%{stream_format: %{framerate: {0, _}}} = state) do
+  defp bump_timestamp(%{stream_format: %{framerate: {0, _denominator}}} = state) do
     state
   end
 
