@@ -14,7 +14,7 @@ It is part of [Membrane Multimedia Framework](https://membrane.stream/).
 Add the following line to your `deps` in `mix.exs`. Run `mix deps.get`.
 
 ```elixir
-	{:membrane_raw_video_parser_plugin, "~> 0.12.2"}
+	{:membrane_raw_video_parser_plugin, "~> 0.12.3"}
 ```
 ## Usage
 The pipeline below displays a sample raw video from file using Membrane raw video parser plugin and 
