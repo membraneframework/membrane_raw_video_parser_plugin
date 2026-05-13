@@ -1,7 +1,7 @@
 defmodule Membrane.RawVideo.Parser.MixProject do
   use Mix.Project
 
-  @version "0.12.2"
+  @version "0.12.3"
   @github_url "https://github.com/membraneframework/membrane_raw_video_parser_plugin"
 
   def project do
@@ -46,7 +46,8 @@ defmodule Membrane.RawVideo.Parser.MixProject do
     ]
 
     if System.get_env("CI") == "true" do
-      [plt_core_path: "priv/plts"] ++ opts
+      File.mkdir_p!(Path.join([__DIR__, "priv", "plts"]))
+      [plt_local_path: "priv/plts", plt_core_path: "priv/plts"] ++ opts
     else
       opts
     end
