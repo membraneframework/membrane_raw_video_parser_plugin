@@ -19,7 +19,7 @@ defmodule Membrane.RawVideo.Parser.MixProject do
       docs: docs(),
       homepage_url: "https://membrane.stream/",
       deps: deps(),
-      aliases: [docs: ["docs", &prepend_llms_links/1]]
+      aliases: [docs: ["docs", &append_llms_links/1]]
     ]
   end
 
@@ -76,7 +76,7 @@ defmodule Membrane.RawVideo.Parser.MixProject do
     ]
   end
 
-  defp prepend_llms_links(_) do
+  defp append_llms_links(_args) do
     output_dir = docs()[:output] || "doc"
     path = Path.join(output_dir, "llms.txt")
 
